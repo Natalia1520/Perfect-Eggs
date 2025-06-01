@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Perfect eggs</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="main-screen">
+        <h1>Perfect Eggs</h1>
+        <div class="egg"></div>
+        <p>One click to egg perfection</p>
+        <button class="start-btn" onclick="showOptions()">START</button>
+      </div>
+
+      <div id="options-screen" class="egg-options">
+        <h2>Tap to choose how you like your eggs</h2>
+
+        <div class="option" onclick="startTimer('soft')">
+          <div class="egg-icon"><div class="boiled soft"></div></div>
+          <span>Soft boiled</span>
+        </div>
+
+        <div class="option" onclick="startTimer('medium')">
+          <div class="egg-icon"><div class="boiled medium"></div></div>
+          <span>Medium boiled</span>
+        </div>
+
+        <div class="option" onclick="startTimer('hard')">
+          <div class="egg-icon"><div class="boiled hard"></div></div>
+          <span>Hard boiled</span>
+        </div>
+      </div>
+
+      <div
+        id="timer-screen"
+        style="display: none; flex-direction: column; align-items: center"
+      >
+        <h2>Will be ready in...</h2>
+        <div class="egg-icon"><div class="boiled" id="timer-egg"></div></div>
+        <p id="countdown">00:00</p>
+        <button onclick="reset()">RESET</button>
+      </div>
+    </div>
+
+    <audio
+      id="alarm-sound"
+      src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3"
+      preload="auto"
+    ></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  font-family: "Kameron", "Georgia", serif;
+  background: linear-gradient(to bottom right, #f1ab69, #fbc875);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 300px;
+  max-width: 320px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.egg {
+  width: 90px;
+  height: 119px;
+  background: white;
+  border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%;
+  margin: 0 auto 1.5rem;
+  position: relative;
+}
+
+.egg::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: #f2ae41;
+  border-radius: 50%;
+  box-shadow: inset -4px -4px 0 rgba(0, 0, 0, 0.1);
+}
+
+p {
+  font-size: 26px;
+  color: #d37531;
+  margin-bottom: 1px;
+}
+
+.start-btn,
+.egg-option,
+button {
+  background-color: transparent;
+  border: 2px solid #d37531;
+  border-radius: 17px;
+  padding: 0.6rem 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(211, 117, 49, 0.3);
+  cursor: pointer;
+  transition: background 0.3s;
+  margin: 1rem auto;
+  display: block;
+}
+
+.start-btn:hover,
+.egg-option:hover,
+button:hover {
+  background: #d37531;
+}
+
+.egg-options {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.egg-icon {
+  width: 90px;
+  height: 119px;
+  background: white;
+  border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.boiled {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.soft {
+  background-color: #f28b15;
+}
+
+.medium {
+  background: radial-gradient(circle, #f28b15 30%, #facc15 70%);
+}
+
+.hard {
+  background-color: #fbd86e;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 23px;
+  color: #d37531;
+}
