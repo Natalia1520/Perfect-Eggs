@@ -56,6 +56,11 @@ function updateCountdownDisplay(seconds) {
 
 function reset() {
   clearInterval(countdownInterval);
+
+  const alarm = document.getElementById("alarm-sound");
+  alarm.pause();
+  alarm.currentTime = 0;
+
   document.getElementById("timer-screen").style.display = "none";
   document.getElementById("options-screen").style.display = "flex";
 }
